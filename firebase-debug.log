@@ -147,3 +147,44 @@
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://127.0.0.1:5000
 
+[debug] [2018-02-25T15:44:12.986Z] ----------------------------------------------------------------------
+[debug] [2018-02-25T15:44:12.989Z] Command:       /usr/local/Cellar/node/9.6.1/bin/node /usr/local/bin/firebase serve
+[debug] [2018-02-25T15:44:12.990Z] CLI Version:   3.17.4
+[debug] [2018-02-25T15:44:12.990Z] Platform:      darwin
+[debug] [2018-02-25T15:44:12.990Z] Node Version:  v9.6.1
+[debug] [2018-02-25T15:44:12.991Z] Time:          Sun Feb 25 2018 09:44:12 GMT-0600 (CST)
+[debug] [2018-02-25T15:44:12.991Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-25T15:44:13.029Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-25T15:44:13.029Z] > authorizing via signed-in user
+[debug] [2018-02-25T15:44:13.045Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-02-25T15:44:13.046Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/fEBjzi6jcfxBNA3Lyo2Sx05Y7V3hqXetSnd3de5ZUZM',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Feb 25 2018 09:44:13 GMT-0600 (CST)
+[debug] [2018-02-25T15:44:13.218Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-25T15:44:13.245Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/roundup-e2ebb  
+  
+ Sun Feb 25 2018 09:44:13 GMT-0600 (CST)
+[debug] [2018-02-25T15:44:13.604Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-25T15:44:13.605Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/roundup-e2ebb/tokens  
+  
+ Sun Feb 25 2018 09:44:13 GMT-0600 (CST)
+[debug] [2018-02-25T15:44:13.851Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/levivillarreal/Desktop/RoundUp'...
+[info] 
+[debug] [2018-02-25T15:44:13.855Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/roundup-e2ebb  
+  
+ Sun Feb 25 2018 09:44:13 GMT-0600 (CST)
+[debug] [2018-02-25T15:44:14.057Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-25T15:44:14.057Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/76383249744/clients/_:getWebAppConfig  
+  
+ Sun Feb 25 2018 09:44:14 GMT-0600 (CST)
+[debug] [2018-02-25T15:44:14.403Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+

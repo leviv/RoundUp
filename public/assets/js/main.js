@@ -2,8 +2,25 @@ $(document).ready(function(){
     firebase.onAuthStateChanged(user);
 });
 
+setTimeout(
+    function() {
+        $(".notification").animate({
+            left: "20px", 
+        }, {
+            duration: 1050,
+            easing: 'easeInOutQuint'
+        });
+    }, 3000);
 
-
+setTimeout(
+    function() {
+        $(".notification").animate({
+            left: "-500px", 
+        }, {
+            duration: 1050,
+            easing: 'easeInOutQuint'
+        });
+    }, 8000);
 
 var provider = new firebase.auth.GoogleAuthProvider();
 firebase.auth().languageCode = 'en';

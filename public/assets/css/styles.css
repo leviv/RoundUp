@@ -431,6 +431,16 @@ form {
   z-index: 999090999909;
   display: block; }
 
+.notification {
+  position: absolute;
+  top: 120px;
+  left: -500px;
+  background: rgba(255, 255, 255, 0.46);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: left;
+  color: red !important; }
+
 .dash-content {
   background: linear-gradient(#2ecba1, #3d4860);
   height: calc(100% - 70px);
