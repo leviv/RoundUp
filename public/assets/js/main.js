@@ -2,6 +2,29 @@ $(document).ready(function(){
     firebase.onAuthStateChanged(user);
 });
 
+var provider = new firebase.auth.GoogleAuthProvider();
+firebase.auth().languageCode = 'en';
+
+$("#sign-in").click(function() {
+	firebase.auth().signInWithPopup(provider).then(function(result) {
+	  // This gives you a Google Access Token. You can use it to access the Google API.
+	  var token = result.credential.accessToken;
+	  // The signed-in user info.
+	  var user = result.user;
+	  // ...
+	}).catch(function(error) {
+	  // Handle Errors here.
+	  var errorCode = error.code;
+	  var errorMessage = error.message;
+	  // The email of the user's account used.
+	  var email = error.email;
+	  // The firebase.auth.AuthCredential type that was used.
+	  var credential = error.credential;
+	  // ...
+	});					
+});
+
+/*
 $("#sign-up").click(function(){
 	var email = $('#email');
   	var password = $('#password');
@@ -45,12 +68,12 @@ $("#login2").click(function(){
 		console.log('fill in both fields');
 	}  
 });
-
+*/
 $("#sign-out").click(function(){
 	firebase.auth().signOut().then(function() {
-	  console.log('Signed Out');
-	}, function(error) {
-	  console.error('Sign Out Error', error);
+  // Sign-out successful.
+	}).catch(function(error) {
+	  // An error happened.
 	});
 });
 
@@ -59,13 +82,13 @@ firebase.auth().onAuthStateChanged(function(user) {
     // User is signed in.
 	  var displayName = user.displayName;
 	  document.getElementById("yeetyeet").innerHTML = displayName;
-	  if (location.href.split(location.host)[1] !== "/dashboard"){
+	  if (location.href.split(location.host)[1] !== "/dashboard.html"){
 	  	  window.location.href = "dashboard.html";
 	  }
 
   } else {
     // No user is signed in.
-	  if (location.href.split(location.host)[1] === "/dashboard"){
+	  if (location.href.split(location.host)[1] === "/dashboard.html"){
 	  	  window.location.href = "index.html";
 	  }
   }
@@ -80,6 +103,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
 
+var database = firebase.database();
 
 
 
