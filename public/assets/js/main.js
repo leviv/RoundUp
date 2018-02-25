@@ -25,7 +25,7 @@ setTimeout(
 var provider = new firebase.auth.GoogleAuthProvider();
 firebase.auth().languageCode = 'en';
 
-$("#sign-in").click(function() {
+$(".sign-in").click(function() {
 	firebase.auth().signInWithPopup(provider).then(function(result) {
 	  // This gives you a Google Access Token. You can use it to access the Google API.
 	  var token = result.credential.accessToken;
