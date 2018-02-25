@@ -29,7 +29,9 @@ $third-color: #f0595e
     -ms-transform: rotate($rotate-degree)
     transform: rotate($rotate-degree)
 	
-=on-circle($item-count, $circle-size, $item-size)
+=on-circle($item-count)
+    $circle-size: 20em
+    $item-size: 1em * ((2 / $item-count) * 10)
     position: relative
     width:  $circle-size
     height: $circle-size

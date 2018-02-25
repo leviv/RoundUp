@@ -5,11 +5,24 @@
 		<meta charset="utf-8">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="The home page of Global High School's Webmaster project">
-		<meta name="author" content="Levi Villarreal">
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
-		<title>RoundUp - Connect with Others</title>
+        <meta name="description" content="The home page of Global High School's Webmaster project">
+        <meta name="author" content="Levi Villarreal">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+        <title>RoundUp - Connect with Others</title>
+
 
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -25,6 +38,9 @@
 		<link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 
 
@@ -68,24 +84,141 @@
 								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 							</li>
 						</ul>
+							<ul class="navbar-nav my-auto my-2 my-lg-0">
+							<li class="nav-item">
+								<a class="nav-link" href="#"><button type="button" class="btn btn-empty">Sign Out</button></a>
+							</li>
+						</ul>
+					</div><!-- 
 					</div><!-- collapse -->
 				</div><!-- container -->
 			</nav>
 		</section><!-- navbar -->
 		
-		<div class="dash-content">
-			<div class="circle-card">
-				<div class="card-title">
-					<h2>HACS</h2>
-					<div class="circle-graphic">
-						<ul class='circle-container'>
-							<li><img src='http://lorempixel.com/100/100/city' alt="..." /></li>
-							<li><img src='http://lorempixel.com/100/100/nature' alt="..." /></li>
-							<li><img src='http://lorempixel.com/100/100/abstract' alt="..." /></li>
-						</ul>
+		
+		
+	
+			
+		
+		<!-- The Modal -->
+		<div class="modal fade" id="profile">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 class="modal-title">Levi's Profile</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
 					</div>
-					<button>Show chat</button>
+
+					<!-- Modal body -->
+					<div class="modal-body">
+						<div class="container">
+							<img src='http://lorempixel.com/100/100/animals' alt="..." />
+							<h2>Levi's Groups</h2>
+							<ul>
+								<a href=""><li>Group 1</li></a>
+								<a href=""><li>Group 2</li></a>
+								<a href=""><li>Group 3</li></a>
+								<a href=""><li>+ Add Group</li></a>
+							</ul>
+							<h2>bio</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure similique aspernatur aliquam qui, perspiciatis tenetur blanditiis velit, nisi alias quas veritatis. Eaque hic enim voluptatum nostrum tempore in, ipsa atque.</p>
+						</div>
+					</div>
+
 				</div>
+			</div>
+		</div><!-- modal -->
+		
+		
+		
+		
+		<div class="dash-content">
+			
+			<iframe src="http://deadsimplechat.com/+MoXMk" frameborder="0" height="100%"></iframe>
+			
+			<div class="groups">
+				<h2>My Groups</h2>
+				<hr>
+				<ul>
+					<a href=""><li>Group 1</li></a>
+					<a href=""><li>Group 2</li></a>
+					<a href=""><li>Group 3</li></a>
+					<a href=""><li>+ Add Group</li></a>
+				</ul>
+			</div>
+			
+			<div class="add-group">
+				<form>
+					<div class="inputGroup inputGroup1">
+						<label for="name">Add group by name</label>
+						<input type="text" id="email" class="email" maxlength="256"/>
+						<span class="indicator"></span>
+					</div><br>
+				</form>
+			</div>
+			
+			<div class="circle-card">
+				
+				<div class="card-title">
+					<h2>H.A.C.S</h2>
+					<a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Hover</a>
+					<a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Hover</a>
+					<a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Hover</a>
+					<a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Hover</a>
+				</div>
+				<hr>
+				<div class="circle-graphic">
+					<ul class='circle-container'>
+						<li class="active">
+							<img src='http://lorempixel.com/100/100/city' alt="..." />
+							<h6>Levi
+								<br>
+								<b>Austin, TX</b>
+							</h6>
+						</li>
+						<li>
+							<img src='http://lorempixel.com/100/100/nature' alt="..." />
+							<h6>Levi
+								<br>
+								<b>Austin, TX</b>
+							</h6>
+						</li>
+						<li>
+							<img src='http://lorempixel.com/100/100/abstract' alt="..." />
+							<h6>Levi
+								<br>
+								<b>Austin, TX</b>
+							</h6>
+						</li>
+						<li>
+							<img src='http://lorempixel.com/100/100/cats' alt="..." />
+							<h6>Levi
+								<br>
+								<b>Austin, TX</b>
+							</h6>
+						</li>
+						<li class="active">
+							<img src='http://lorempixel.com/100/100/food' alt="..." />
+							<h6>Levi
+								<br>
+								<b>Austin, TX</b>
+							</h6>
+						</li>
+						<li data-toggle="modal" data-target="#profile">
+							<img src='http://lorempixel.com/100/100/animals' alt="..." />
+							<h6>Levi
+								<br>
+								<b>Austin, TX</b>
+							</h6>
+						</li>
+					</ul>
+				</div>
+
+					
+				
+				<button id="show-chat">Toggle chat</button>
 			</div>
 		</div>
 

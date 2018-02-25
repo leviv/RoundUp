@@ -427,9 +427,20 @@ form {
  * For: RoundUp
  * Completed: IN PROGRESS
  * =============================== */
+.tooltip {
+  z-index: 999090999909;
+  display: block; }
+
 .dash-content {
-  background: #3d4860;
-  height: 100%; }
+  background: linear-gradient(#2ecba1, #3d4860);
+  height: calc(100% - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .dash-content iframe {
+    width: 0px; }
+    .dash-content iframe .navbar-form {
+      padding-left: 50px; }
 
 .circle-container {
   position: relative;
@@ -439,47 +450,95 @@ form {
   border-radius: 50%;
   list-style: none;
   margin: 5em auto 0;
-  border: solid 5px tomato; }
+  border: solid 10px #2ecba1; }
   .circle-container > * {
     display: block;
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 6em;
-    height: 6em;
-    margin: -3em; }
+    width: 3.3333333333em;
+    height: 3.3333333333em;
+    margin: -1.6666666667em; }
     .circle-container > *:nth-of-type(1) {
       transform: rotate(0deg) translate(10em) rotate(0deg);
       -webkit-transform: rotate(0deg) translate(10em) rotate(0deg); }
     .circle-container > *:nth-of-type(2) {
-      transform: rotate(45deg) translate(10em) rotate(-45deg);
-      -webkit-transform: rotate(45deg) translate(10em) rotate(-45deg); }
+      transform: rotate(60deg) translate(10em) rotate(-60deg);
+      -webkit-transform: rotate(60deg) translate(10em) rotate(-60deg); }
     .circle-container > *:nth-of-type(3) {
-      transform: rotate(90deg) translate(10em) rotate(-90deg);
-      -webkit-transform: rotate(90deg) translate(10em) rotate(-90deg); }
+      transform: rotate(120deg) translate(10em) rotate(-120deg);
+      -webkit-transform: rotate(120deg) translate(10em) rotate(-120deg); }
     .circle-container > *:nth-of-type(4) {
-      transform: rotate(135deg) translate(10em) rotate(-135deg);
-      -webkit-transform: rotate(135deg) translate(10em) rotate(-135deg); }
-    .circle-container > *:nth-of-type(5) {
       transform: rotate(180deg) translate(10em) rotate(-180deg);
       -webkit-transform: rotate(180deg) translate(10em) rotate(-180deg); }
+    .circle-container > *:nth-of-type(5) {
+      transform: rotate(240deg) translate(10em) rotate(-240deg);
+      -webkit-transform: rotate(240deg) translate(10em) rotate(-240deg); }
     .circle-container > *:nth-of-type(6) {
-      transform: rotate(225deg) translate(10em) rotate(-225deg);
-      -webkit-transform: rotate(225deg) translate(10em) rotate(-225deg); }
-    .circle-container > *:nth-of-type(7) {
-      transform: rotate(270deg) translate(10em) rotate(-270deg);
-      -webkit-transform: rotate(270deg) translate(10em) rotate(-270deg); }
-    .circle-container > *:nth-of-type(8) {
-      transform: rotate(315deg) translate(10em) rotate(-315deg);
-      -webkit-transform: rotate(315deg) translate(10em) rotate(-315deg); }
+      transform: rotate(300deg) translate(10em) rotate(-300deg);
+      -webkit-transform: rotate(300deg) translate(10em) rotate(-300deg); }
   .circle-container img {
     display: block;
     max-width: 100%;
     border-radius: 50%;
     filter: grayscale(100%);
-    border: solid 5px tomato;
+    border: solid 2px #f0595e;
     transition: 0.15s; }
-    .circle-container img:hover, .circle-container img:active {
-      filter: grayscale(0); }
+  .circle-container .active img {
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0); }
+
+.circle-card {
+  width: 500px;
+  background: rgba(255, 255, 255, 0.46);
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0px 0px 8px #888888;
+  margin: 0 auto;
+  border-radius: 20px;
+  top: 50px; }
+
+.circle-card button {
+  margin-top: 75px;
+  padding: 5px 25px;
+  background: #2ecba1;
+  border: 2px solid #3d4860;
+  color: #fff;
+  font-size: 1.5em;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  cursor: pointer; }
+  .circle-card button:hover {
+    background: #fff;
+    color: #3d4860; }
+
+.groups {
+  position: absolute;
+  top: 120px;
+  right: 40px;
+  background: rgba(255, 255, 255, 0.46);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: left; }
+  .groups ul {
+    padding: 0 !important;
+    margin: 0 !important; }
+
+.add-group {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.46);
+  border-radius: 20px;
+  padding: 0px 10px;
+  text-align: left; }
+  .add-group input {
+    padding: 0px !important;
+    margin: 0px !important; }
 
 /*# sourceMappingURL=styles.css.map */

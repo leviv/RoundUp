@@ -22,27 +22,29 @@ $(window).scroll(function(){
 	//250 is fade pixels
 });
 
-/* ===============================
-    http://callmenick.com/2015/01/25/animating-css-only-hamburger-menu-icons/
-=============================== */
-(function() {
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
 
-    "use strict";
-
-    var toggles = document.querySelectorAll(".cmn-toggle-switch");
-
-    for (var i = toggles.length - 1; i >= 0; i--) {
-        var toggle = toggles[i];
-        toggleHandler(toggle);
-    };
-
-    function toggleHandler(toggle) {
-        toggle.addEventListener( "click", function(e) {
-            e.preventDefault();
-            (this.classList.contains("active") === true) ? this.classList.remove("active") : this.classList.add("active");
+$("button").click(function(){
+    if ($("iframe").hasClass("open-iframe")) {
+		
+		$("iframe").removeClass("open-iframe");
+		$("iframe").animate({
+            width: "0px", 
+        }, {
+            duration: 1050,
+            easing: 'easeInOutQuint'
         });
-    }
-
-})();
-
-
+		
+	} else {
+		$("iframe").animate({
+            width: "30%", 
+        }, {
+            duration: 1050,
+            easing: 'easeInOutQuint'
+        });
+		$("iframe").addClass("open-iframe");
+	}
+    // Animation complete.
+});
