@@ -2,6 +2,9 @@ $(document).ready(function(){
     firebase.onAuthStateChanged(user);
 });
 
+
+
+
 var provider = new firebase.auth.GoogleAuthProvider();
 firebase.auth().languageCode = 'en';
 
@@ -83,6 +86,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 	  var displayName = user.displayName;
 	  document.getElementById("yeetyeet").innerHTML = displayName;
 	  if (location.href.split(location.host)[1] !== "/dashboard.html"){
+		  var rootRef = firebase.database().ref().chirld('infos');
 	  	  window.location.href = "dashboard.html";
 	  }
 
@@ -103,7 +107,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
 
-var database = firebase.database();
 
 
 

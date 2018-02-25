@@ -98,6 +98,9 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#"><button type="button" class="btn btn-empty" id="sign-out">Sign Out</button></a>
 							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#"><button type="button" class="btn btn-empty" id="edit-profile" data-toggle="modal" data-target="#edit-profile-modal">Edit Profile</button></a>
+							</li>
 						</ul>
 					</div><!-- 
 					</div><!-- collapse -->
@@ -108,7 +111,75 @@
 		
 		
 	
-			
+		<!-- The Modal -->
+		<div class="modal fade" id="edit-profile-modal">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 class="modal-title">Edit Profile</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<!-- Modal body -->
+					<div class="modal-body">
+						<div class="container">
+							<div class="inputGroup inputGroup1">
+								<label for="name">Username</label>
+								<input type="text" id="username-update" maxlength="256"/>
+								<span class="indicator"></span>
+							</div><br>
+							
+							<div class="inputGroup inputGroup1">
+								<label for="name">Name</label>
+								<input type="text" id="name-update" maxlength="256"/>
+								<span class="indicator"></span>
+							</div><br>
+							
+							<div class="inputGroup inputGroup1">
+								<label for="name">Email</label>
+								<input type="text" id="email-update" maxlength="256"/>
+								<span class="indicator"></span>
+							</div><br>
+							<div class="inputGroup inputGroup1">
+								<label for="name">Twitter</label>
+								<input type="text" id="twitter-update"  maxlength="256"/>
+							</div>
+							<br>
+							<div class="inputGroup inputGroup1">
+								<label for="name">Instagram</label>
+								<input type="text" id="instagram-update"  maxlength="256"/>
+							</div>
+							<br>
+							<div class="inputGroup inputGroup1">
+								<label for="name">Facebook</label>
+								<input type="text" id="facebook-update"  maxlength="256"/>
+							</div>
+							<br>
+							<div class="inputGroup inputGroup1">
+								<label for="name">Snapchat</label>
+								<input type="text" id="snapchat-update"  maxlength="256"/>
+							</div>
+							<br>
+							<div class="inputGroup inputGroup1">
+								<label for="name">Profile Url</label>
+								<input type="text" id="url-update"  maxlength="256"/>
+							</div>
+							<br>
+							<div class="inputGroup inputGroup3">
+								<button id="update-modal">Update</button>
+							</div>	
+							<br>
+							<div class="inputGroup inputGroup3">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal" id="sign-up">Close</button>
+							</div>	
+							
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div><!-- modal -->
 		
 		<!-- The Modal -->
 		<div class="modal fade" id="profile">
