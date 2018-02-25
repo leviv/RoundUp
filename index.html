@@ -12,21 +12,16 @@
         <title>RoundUp - Connect with Others</title>
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
         <!-- Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-        <!-- Bootstrap JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-        <!-- Bootstrap JS -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
         <!-- External Code -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <script src="assets/js/ui.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
@@ -57,7 +52,7 @@
 		
 		<section id="navbar">
 			<!-- Just an image -->
-			<nav class="navbar navbar-light bg-faded navbar-toggleable-md fixed-top">
+			<nav class="navbar navbar-expand-sm navbar-light bg-faded navbar-toggleable-md fixed-top">
 				
 				<div class="container">
 				
@@ -72,16 +67,16 @@
 							<li class="nav-item active">
 								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">About</a>
-							</li>
+							<a class="nav-link" href="#about" name="about"><li class="nav-item">
+								About
+								</li></a>
 						</ul>
 						<ul class="navbar-nav my-auto my-2 my-lg-0">
 							<li class="nav-item active">
-								<a class="nav-link" href="#"><button type="button" class="btn btn-success">Log In</button></a>
+								<a class="nav-link" href="#"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#sign-in">Log In</button></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#"><button type="button" class="btn btn-empty">Sign In</button></a>
+								<a class="nav-link" href="#"><button type="button" class="btn btn-empty" data-toggle="modal" data-target="#sign-up">Sign Up</button></a>
 							</li>
 						</ul>
 					</div><!-- collapse -->
@@ -90,7 +85,107 @@
 		</section><!-- navbar -->
 		
 
-			<div class="container-hero"> 
+		<!-- The Modal -->
+		<div class="modal fade" id="sign-up">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 class="modal-title">Register for RoundUp!</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+
+					<!-- Modal body -->
+					<div class="modal-body">
+						<form>
+						
+							<div class="inputGroup inputGroup1">
+								<label for="name">Name</label>
+								<input type="text" id="email" class="email" maxlength="256"/>
+								<span class="indicator"></span>
+							</div><br>
+							
+							<div class="inputGroup inputGroup1">
+								<label for="email1">Email</label>
+								<input type="text" id="email" class="email" maxlength="256"/>
+								<span class="indicator"></span>
+							</div><br>
+							<div class="inputGroup inputGroup2">
+								<label for="password">Password</label>
+								<input type="password" id="password" class="password" />
+							</div>
+							<br>
+							<div class="inputGroup inputGroup3">
+								<button id="login">Sign Up</button>
+							</div>	
+							<br>
+							<div class="inputGroup inputGroup3">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>	
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div><!-- modal -->
+
+
+		<!-- The Modal -->
+		<div class="modal fade" id="sign-in">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 class="modal-title">Sign into an existing account</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+
+					<!-- Modal body -->
+					<div class="modal-body">
+						<form>
+
+							<div class="inputGroup inputGroup1">
+								<label for="email1">Email</label>
+								<input type="text" id="email" class="email" maxlength="256"/>
+								<span class="indicator"></span>
+							</div><br>
+							<div class="inputGroup inputGroup2">
+								<label for="password">Password</label>
+								<input type="password" id="password" class="password" />
+							</div>
+							<br>
+							<div class="inputGroup inputGroup3">
+								<button id="login">Log in</button>
+							</div>	
+							<br>
+							<div class="inputGroup inputGroup3">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>	
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div><!-- modal -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+			<div class="container-hero" id=""> 
 				<svg class="background__lights" id="lines" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewbox="0 0 1920 1080" xml:space="preserve" preserveAspectRatio="none">
 					<g class="lines">
 						<rect class="line" x="1253.6" width="4.5" height="1080"></rect>
@@ -136,7 +231,7 @@
 				
 				<div class="hero-content">
 					<h2>Connect with People</h2>
-					<a class="nav-link" href="#"><button type="button" class="btn btn-empty">Make an Account</button></a>
+					<a class="nav-link" href="#"><button type="button" class="btn btn-empty" data-toggle="modal" data-target="#sign-up">Make an Account</button></a>
 				</div>
 				<div class="arrow bounce"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></div>
 			</div>
@@ -146,24 +241,49 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4 feature">
-						<h3>Title</h3>
+						<h3>Connect</h3>
 						<img src="assets/img/share.png" alt="">
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta illum eveniet reiciendis, inventore suscipit amet! Aliquid, cumque, minus. Itaque harum eum enim eveniet, optio laborum numquam tempore id ratione dolorem.</p>
 					</div>
 					<div class="col-sm-4 feature">
-						<h3>Title</h3>
+						<h3>Take Anywhere</h3>
 						<img src="assets/img/iphone.png" alt="">
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta illum eveniet reiciendis, inventore suscipit amet! Aliquid, cumque, minus. Itaque harum eum enim eveniet, optio laborum numquam tempore id ratione dolorem.</p>
 					</div>
 					<div class="col-sm-4 feature">
-						<h3>Title</h3>
+						<h3>Share Location</h3>
 						<img src="assets/img/connectivity.png" alt="">
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta illum eveniet reiciendis, inventore suscipit amet! Aliquid, cumque, minus. Itaque harum eum enim eveniet, optio laborum numquam tempore id ratione dolorem.</p>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-12">
+						<a href="#" align="center" data-toggle="modal" data-target="#sign-up"><div class="get-started">
+							<h3>Get Started</h3>
+						</div></a>
 					</div>
 				</div>
 			</div>
        </section>
         
+        
+        <section id="footer">
+			<!-- Button to Open the Modal -->
+			<!--Footer-->
+			<footer class="page-footer font-small pt-4 mt-4">
+
+				<!--Copyright-->
+				<div class="footer-copyright py-3 text-center">
+					<div class="container-fluid">
+						<h4>© Copyright 2018 <br><br> Coded w/ <i class="fa fa-heart" aria-hidden="true"></i> <b>@</b> HackUTD</h4>
+					</div>
+				</div>
+				<!--/.Copyright-->
+
+			</footer>
+			<!--/.Footer-->
+        </section>
 
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/classie.js"></script>
