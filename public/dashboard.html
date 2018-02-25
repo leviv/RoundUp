@@ -29,18 +29,22 @@
 
 
 		<!-- Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
-		<!-- External Code -->
+		
+			<!-- External Code -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		
+ 		<!-- External Code -->
 		<link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 
 
@@ -85,8 +89,14 @@
 							</li>
 						</ul>
 							<ul class="navbar-nav my-auto my-2 my-lg-0">
+      						<li class="nav-item">
+								<div hidden id="user-pic"></div>
+							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#"><button type="button" class="btn btn-empty">Sign Out</button></a>
+								<div hidden id="user-name"></div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#"><button type="button" class="btn btn-empty" id="sign-out">Sign Out</button></a>
 							</li>
 						</ul>
 					</div><!-- 
@@ -94,7 +104,6 @@
 				</div><!-- container -->
 			</nav>
 		</section><!-- navbar -->
-<<<<<<< HEAD
 		
 		
 		
@@ -116,6 +125,9 @@
 					<div class="modal-body">
 						<div class="container">
 							<img src='http://lorempixel.com/100/100/animals' alt="..." />
+							<h1>Levi Villarreal</h1>
+							<h2>Bio</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure similique aspernatur aliquam qui, perspiciatis tenetur blanditiis velit, nisi alias quas veritatis. Eaque hic enim voluptatum nostrum tempore in, ipsa atque.</p>
 							<h2>Levi's Groups</h2>
 							<ul>
 								<a href=""><li>Group 1</li></a>
@@ -123,8 +135,7 @@
 								<a href=""><li>Group 3</li></a>
 								<a href=""><li>+ Add Group</li></a>
 							</ul>
-							<h2>bio</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure similique aspernatur aliquam qui, perspiciatis tenetur blanditiis velit, nisi alias quas veritatis. Eaque hic enim voluptatum nostrum tempore in, ipsa atque.</p>
+							
 						</div>
 					</div>
 
@@ -132,12 +143,7 @@
 			</div>
 		</div><!-- modal -->
 		
-		
-		
-		
-=======
-
->>>>>>> 40fc2a4d44e2c198c84348f9c67b76d148c50549
+	
 		<div class="dash-content">
 			
 			<iframe src="http://deadsimplechat.com/+MoXMk" frameborder="0" height="100%"></iframe>
@@ -167,10 +173,6 @@
 				
 				<div class="card-title">
 					<h2>H.A.C.S</h2>
-					<a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Hover</a>
-					<a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Hover</a>
-					<a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Hover</a>
-					<a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Hover</a>
 				</div>
 				<hr>
 				<div class="circle-graphic">
@@ -182,7 +184,7 @@
 								<b>Austin, TX</b>
 							</h6>
 						</li>
-						<li>
+						<li class="me">
 							<img src='http://lorempixel.com/100/100/nature' alt="..." />
 							<h6>Levi
 								<br>
@@ -225,7 +227,19 @@
 				<button id="show-chat">Toggle chat</button>
 			</div>
 		</div>
-
+		<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+			apiKey: "AIzaSyBGkr6OYH5DUcAJb1YHX0DV5iU-q_UipVI",
+			authDomain: "roundup-e2ebb.firebaseapp.com",
+			databaseURL: "https://roundup-e2ebb.firebaseio.com",
+			projectId: "roundup-e2ebb",
+			storageBucket: "roundup-e2ebb.appspot.com",
+			messagingSenderId: "76383249744"
+		  };
+		  firebase.initializeApp(config);
+		</script>
 		<script src="assets/js/bootstrap.min.js"></script>
 		<script src="assets/js/classie.js"></script>
 		<script src="assets/js/main.js"></script>

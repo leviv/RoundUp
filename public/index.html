@@ -39,7 +39,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
 
 
-
         <!-- Font Awesome Icons -->
         <link href="assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
@@ -114,7 +113,7 @@
 						
 							<div class="inputGroup inputGroup1">
 								<label for="name">Name</label>
-								<input type="text" id="email" class="email" maxlength="256"/>
+								<input type="text" id="name" class="name" maxlength="256"/>
 								<span class="indicator"></span>
 							</div><br>
 							
@@ -133,7 +132,7 @@
 							</div>	
 							<br>
 							<div class="inputGroup inputGroup3">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-secondary" data-dismiss="modal" id="sign-up">Close</button>
 							</div>	
 						</form>
 					</div>
@@ -160,16 +159,16 @@
 
 							<div class="inputGroup inputGroup1">
 								<label for="email1">Email</label>
-								<input type="text" id="email" class="email" maxlength="256"/>
+								<input type="text" id="email2" class="email" maxlength="256"/>
 								<span class="indicator"></span>
 							</div><br>
 							<div class="inputGroup inputGroup2">
 								<label for="password">Password</label>
-								<input type="password" id="password" class="password" />
+								<input type="password" id="password1" class="password" />
 							</div>
 							<br>
 							<div class="inputGroup inputGroup3">
-								<button id="login">Log in</button>
+								<button id="login2">Log in</button>
 							</div>	
 							<br>
 							<div class="inputGroup inputGroup3">
@@ -292,11 +291,27 @@
 					</div>
 				</div>
 				<!--/.Copyright-->
+				
+				<h1 id="yeetyeet"></h1>
 
 			</footer>
 			<!--/.Footer-->
         </section>
 
+       
+		<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+			apiKey: "AIzaSyBGkr6OYH5DUcAJb1YHX0DV5iU-q_UipVI",
+			authDomain: "roundup-e2ebb.firebaseapp.com",
+			databaseURL: "https://roundup-e2ebb.firebaseio.com",
+			projectId: "roundup-e2ebb",
+			storageBucket: "roundup-e2ebb.appspot.com",
+			messagingSenderId: "76383249744"
+		  };
+		  firebase.initializeApp(config);
+		</script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/classie.js"></script>
 		<script src="assets/js/main.js"></script>

@@ -456,9 +456,9 @@ form {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 3.3333333333em;
-    height: 3.3333333333em;
-    margin: -1.6666666667em; }
+    width: 6.6666666667em;
+    height: 6.6666666667em;
+    margin: -3.3333333333em; }
     .circle-container > *:nth-of-type(1) {
       transform: rotate(0deg) translate(10em) rotate(0deg);
       -webkit-transform: rotate(0deg) translate(10em) rotate(0deg); }
@@ -483,10 +483,20 @@ form {
     border-radius: 50%;
     filter: grayscale(100%);
     border: solid 2px #f0595e;
-    transition: 0.15s; }
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    cursor: pointer; }
+    .circle-container img:hover {
+      filter: grayscale(0);
+      -webkit-filter: grayscale(0); }
   .circle-container .active img {
     filter: grayscale(0);
     -webkit-filter: grayscale(0); }
+  .circle-container h6 {
+    color: #fff; }
 
 .circle-card {
   width: 500px;
@@ -540,5 +550,12 @@ form {
   .add-group input {
     padding: 0px !important;
     margin: 0px !important; }
+
+#profile {
+  text-align: center; }
+  #profile img {
+    border-radius: 50%; }
+  #profile ul {
+    text-align: left; }
 
 /*# sourceMappingURL=styles.css.map */

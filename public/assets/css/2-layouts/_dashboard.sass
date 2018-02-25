@@ -29,10 +29,16 @@
 		border-radius: 50%
 		filter: grayscale(100%)
 		border: solid 2px $third-color
-		transition: .15s
+		+transition(all, .5s)
+		cursor: pointer
+		&:hover
+			filter: grayscale(0)
+			-webkit-filter: grayscale(0)
 	.active img
 		filter: grayscale(0)
 		-webkit-filter: grayscale(0)
+	h6
+		color: #fff
 
 .circle-card
 	width: 500px
@@ -85,4 +91,9 @@
 		padding: 0px !important
 		margin: 0px !important
 	
-		
+#profile
+	text-align: center
+	img
+		border-radius: 50%
+	ul
+		text-align: left
