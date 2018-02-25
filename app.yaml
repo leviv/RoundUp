@@ -1,7 +1,4 @@
-application: hello-world
-version: 1
 runtime: python27
-api_version: 1
 threadsafe: yes
 
 handlers:
@@ -9,8 +6,8 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
-- url: /stuff
-  static_dir: stuff/
+- url: /assets
+  static_dir: assets/
 
 - url: .*
   script: main.app
