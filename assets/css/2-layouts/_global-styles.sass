@@ -49,27 +49,14 @@ h1, h1 span
 		text-decoration: none
 		background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, $primary-color 50%)
 
-/* ===============================
-	Sidebar
-	=============================== */
+.btn-empty 
+	background: rgba(250, 250, 250, 0)
+	border: 1px solid #000
+	+transition(all, .5s)
+	&:hover
+		background: rgba(0, 0, 0, 0.2) !important
+		
 
-#social-sidebar
-	position: absolute
-	left: 0
-	text-align: center
-	top: 50%
-	transform: translate(-50%, -50%)
-	z-index: 9
-	padding-left: 54px
-	li
-		display: block
-		font-size: 24px
-		a
-			color: $secondary-color
-			+transition(all, .5s)
-			&:hover
-				color: $primary-color
-				+transition(all, .5s)
 
 /* ===============================
     Navbar
