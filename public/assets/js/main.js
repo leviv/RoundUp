@@ -80,13 +80,20 @@ $("#sign-out").click(function(){
 	});
 });
 
+var rootRef = firebase.database().ref().child('users');
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
 	  var displayName = user.displayName;
 	  document.getElementById("yeetyeet").innerHTML = displayName;
 	  if (location.href.split(location.host)[1] !== "/dashboard.html"){
-		  var rootRef = firebase.database().ref().chirld('infos');
+		  rootRef.set({
+			  name:user.displayName,
+			  username:user.displayName,
+			  location: "Richardson, TX",
+			  bio:"lfucksdaf"
+		  });
 	  	  window.location.href = "dashboard.html";
 	  }
 
