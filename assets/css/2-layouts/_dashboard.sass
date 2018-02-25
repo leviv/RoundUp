@@ -1,0 +1,24 @@
+/* ===============================
+	Custom Sass
+	By: Levi Villarreal
+	For: RoundUp
+	Completed: IN PROGRESS
+	=============================== */
+
+.dash-content
+	background: $secondary-color
+	height: 100%
+
+.circle-container 
+	+on-circle(8, 20em, 6em)
+	margin: 5em auto 0
+	border: solid 5px tomato
+	img  
+		display: block
+		max-width: 100%
+		border-radius: 50%
+		filter: grayscale(100%)
+		border: solid 5px tomato
+		transition: .15s
+		&:hover, &:active 
+			filter: grayscale(0)
